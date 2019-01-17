@@ -28,7 +28,8 @@ module Spree
                                            variant: variant,
                                            options: opts)
         else
-          line_item.quantity += quantity.to_i
+          # line_item.quantity += quantity.to_i
+          line_item.quantity = 1
         end
 
         line_item.target_shipment = options[:shipment] if options.key? :shipment
